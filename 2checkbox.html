@@ -1,0 +1,43 @@
+<!-- #### 2. Check-boxes
+ Create three options of check-boxes (three colors/fruit etc options) using the DoM. 
+ Then use a switch statement to give an alert depending on which option the user selects. 
+Example: You clicked "strawberry!" Yum! -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+  <div id="allCheckBoxes">
+    <input class="f1" type="checkbox" value="Banana"><label>Banana</label> <br>
+    <input class="f1" type="checkbox" value="Apple"><label>Apple</label><br>
+    <input class="f1" type="checkbox" value="Strawberry"><label>Strawberry</label><br>
+    </div>
+        
+        <script>
+       let fruits=document.getElementsByClassName('f1');
+let checkBoxes=document.getElementById('allCheckBoxes');
+checkBoxes.addEventListener('change',function(){
+    for(let i=0;i<fruits.length;i++){
+     if(fruits[i].checked){
+         switch(fruits[i].value){
+             case "Banana":
+                 alert(fruits[i].value);
+                 break;
+            case "Apple":
+                alert (fruits[i].value);
+                break;
+            case "Strawberry":
+                alert(fruits[i].value);
+                break;
+         }
+     }
+    }
+})
+
+        </script>
+</body>
+</html>

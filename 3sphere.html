@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   <!-- 
+    #### 3. Volume
+Create a program to calculate the volume of a sphere.
+ The user input should include "radius" and a "calculate" button.
+  The user should also see the result of the sphere volume. 
+ -->
+ <form>
+    radius   : <input type="text" id="radius"><br>
+  
+   <input type="button" id="multi" onclick="radiusVolume()" value="radiusVolume">
+  
+</form>
+<p id="result"> The result is : </p>
+
+
+    <script>
+        function radiusVolume(){
+            var r=document.getElementById("radius").value;
+           
+            document.getElementById('result').innerHTML=(4/3)*(Math.PI)*(r**3);
+        }
+        </script>
+</body>
+</html>
